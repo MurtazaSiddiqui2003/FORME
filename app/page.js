@@ -168,6 +168,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="editorial-strip" aria-label="FORME editorial values">
+        <div className="editorial-strip-track" aria-hidden="true">
+          {Array.from({ length: 4 }, (_, index) => (
+            <span className="editorial-strip-group" key={index}>
+              <span>FORME STUDIO</span><i>✳</i><span>CONSIDERED BY DESIGN</span><i>✳</i><span>ISSUE Nº 01</span><i>✳</i>
+            </span>
+          ))}
+        </div>
+      </section>
+
       <section className="lookbook section-wrap" id="looks">
         <div className="section-heading" data-reveal>
           <div>
