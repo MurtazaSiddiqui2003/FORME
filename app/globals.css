@@ -146,3 +146,46 @@ button { color: inherit; font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Editorial ticker — a quiet, continuous motion break between stories. */
+.editorial-strip {
+  overflow: hidden;
+  padding: 22px 0 24px;
+  background: #dcd5c9;
+  color: var(--ink);
+  border-top: 1px solid rgba(29, 28, 25, 0.16);
+  border-bottom: 1px solid rgba(29, 28, 25, 0.16);
+}
+.editorial-strip-track {
+  display: flex;
+  width: max-content;
+  animation: editorial-marquee 34s linear infinite;
+}
+.editorial-strip-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(22px, 4vw, 60px);
+  padding-right: clamp(22px, 4vw, 60px);
+  white-space: nowrap;
+  font-size: 10px;
+  letter-spacing: .2em;
+}
+.editorial-strip-group i {
+  font-style: normal;
+  font-size: 15px;
+  opacity: .6;
+}
+@keyframes editorial-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.editorial-strip:hover .editorial-strip-track { animation-play-state: paused; }
+
+@media (max-width: 760px) {
+  .editorial-strip { padding: 18px 0 19px; }
+  .editorial-strip-group { font-size: 8px; letter-spacing: .16em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .editorial-strip-track { animation: none; }
+}
