@@ -11,7 +11,7 @@ const looks = [
     title: "Quiet confidence",
     category: "The tailoring story",
     image:
-      "https://images.unsplash.com/photo-153910 надеж?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85",
     alt: "Minimal fashion editorial portrait",
     className: "look-image look-image-tall",
   },
